@@ -7,8 +7,15 @@ pipeline {
       }
     }
 
+    stage('Say Hello') {
+      steps {
+        echo 'Hello!'
+        sh 'hostname -i'
+      }
+    }
+
   }
   environment {
-    COMPLETED_MSG = '"Build done!"'
+    COMPLETED_MSG = 'Build done!'
   }
 }
